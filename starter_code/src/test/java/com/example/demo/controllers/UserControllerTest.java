@@ -25,6 +25,8 @@ public class UserControllerTest {
 
     private BCryptPasswordEncoder encoder = mock(BCryptPasswordEncoder.class);
 
+    private User userMock = mock(User.class);
+
     @Before
     public void setUp(){
         userController = new UserController();
@@ -36,24 +38,62 @@ public class UserControllerTest {
     @Test
     public void createUser() throws Exception {
 
-        when(encoder.encode("pwd")).thenReturn("thisIsHashed");
+        when(encoder.encode("password")).thenReturn("thisIsHashed");
 
         CreateUserRequest userRequest = new CreateUserRequest();
         userRequest.setUsername("Dan");
-        userRequest.setPassword("pwd");
-        userRequest.setConfirmPassword("pwd");
+        userRequest.setPassword("password");
+        userRequest.setConfirmPassword("password");
 
         final ResponseEntity<User> responseEntity = userController.createUser(userRequest);
 
         assertNotNull(responseEntity);
-        //assertEquals(200, responseEntity.getStatusCodeValue());
+        assertEquals(200, responseEntity.getStatusCodeValue());
 
-        //User user = responseEntity.getBody();
-        //assertNotNull(user);
-        //assertEquals(0,user.getId());
-        //assertEquals("Dan", user.getUsername());
-        //assertEquals("thisIsHashed", user.getPassword());
+        User user = responseEntity.getBody();
+        assertNotNull(user);
+        assertEquals(0,user.getId());
+        assertEquals("Dan", user.getUsername());
+        assertEquals("thisIsHashed", user.getPassword());
 
     }
+
+    @Test
+    public void findUserById() throws Exception {
+        User userMock = mock(User.class);
+        userMock.setId(1L);
+        userMock.setUsername("DanMockUser");
+        when(userRepo.findById(1L)).thenReturn(java.util.Optional.of(userMock));
+
+        final ResponseEntity<User> responseEntity = userController.findById(1L);
+        User user = responseEntity.getBody();
+
+        assertNotNull(responseEntity);
+        assertEquals(200, responseEntity.getStatusCodeValue());
+
+        assertNotNull(user);
+        assertEquals(userMock.getId(), user.getId());
+        assertEquals(userMock.getUsername(), user.getUsername());
+    }
+
+    @Test
+    public void findUserByUserName() throws Exception {
+        User userMock = mock(User.class);
+        userMock.setId(1L);
+        userMock.setUsername("DanMockUser");
+        when(userRepo.findByUsername("DanMockUser")).thenReturn(userMock);
+
+        final ResponseEntity<User> responseEntity = userController.findByUserName("DanMockUser");
+        User user = responseEntity.getBody();
+
+        assertNotNull(responseEntity);
+        assertEquals(200, responseEntity.getStatusCodeValue());
+
+        assertNotNull(user);
+        assertEquals(userMock.getId(), user.getId());
+        assertEquals(userMock.getUsername(), user.getUsername());
+    }
+
+
 
 }

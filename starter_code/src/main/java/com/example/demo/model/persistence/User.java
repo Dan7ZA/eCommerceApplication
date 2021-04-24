@@ -31,8 +31,19 @@ public class User {
 	@JsonIgnore
     private Cart cart;
 
-	//Getters & setters
+	//Constructor
 
+
+	public User() {
+	}
+
+	public User(long id, String username){
+		this.setId(id);
+		this.setUsername(username);
+	}
+
+
+	//Getters & setters
 
 	public String getPassword() {
 		return password;
