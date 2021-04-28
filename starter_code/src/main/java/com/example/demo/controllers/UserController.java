@@ -1,12 +1,17 @@
 package com.example.demo.controllers;
 
+import java.io.IOException;
 import java.security.SecureRandom;
 import java.util.Base64;
 import java.util.Optional;
 
+
+import com.splunk.TcpInput;
+import org.apache.logging.log4j.LogManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -28,6 +33,9 @@ import com.example.demo.model.requests.CreateUserRequest;
 public class UserController {
 
 	private static final Logger log = LoggerFactory.getLogger(UserController.class);
+
+	@Autowired
+	private TcpInput tcpInput;
 
 	@Autowired
 	private UserRepository userRepository;
@@ -53,7 +61,12 @@ public class UserController {
 	public ResponseEntity<User> createUser(@RequestBody CreateUserRequest createUserRequest) {
 		User user = new User();
 		user.setUsername(createUserRequest.getUsername());
-		log.info("Username set with ", createUserRequest.getUsername());
+		String logMessage = "Username set with " + createUserRequest.getUsername();
+		try {
+			tcpInput.submit(logMessage);
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 		Cart cart = new Cart();
 		cartRepository.save(cart);
 		user.setCart(cart);
