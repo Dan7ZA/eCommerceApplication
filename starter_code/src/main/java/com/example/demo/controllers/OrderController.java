@@ -40,11 +40,17 @@ public class OrderController {
 		}
 		UserOrder order = UserOrder.createFromCart(user.getCart());
 		orderRepository.save(order);
+
+		String logMessage = "Order: order submitted: order value: "+order.getTotal() +" User: username: "+username;
+		log.info(logMessage);
+
 		return ResponseEntity.ok(order);
 	}
 	
 	@GetMapping("/history/{username}")
 	public ResponseEntity<List<UserOrder>> getOrdersForUser(@PathVariable String username) {
+		String logMessage = "Order: order history requested: User: username: "+username;
+		log.info(logMessage);
 		User user = userRepository.findByUsername(username);
 		if(user == null) {
 			return ResponseEntity.notFound().build();

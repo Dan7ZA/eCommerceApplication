@@ -25,16 +25,22 @@ public class ItemController {
 	
 	@GetMapping
 	public ResponseEntity<List<Item>> getItems() {
+		/*String logMessage = "getItems method called";
+		log.info(logMessage);*/
 		return ResponseEntity.ok(itemRepository.findAll());
 	}
 	
 	@GetMapping("/{id}")
 	public ResponseEntity<Item> getItemById(@PathVariable Long id) {
+		/*String logMessage = "getItem by ID method called for Item id: " + id;
+		log.info(logMessage);*/
 		return ResponseEntity.of(itemRepository.findById(id));
 	}
 	
 	@GetMapping("/name/{name}")
 	public ResponseEntity<List<Item>> getItemsByName(@PathVariable String name) {
+		/*String logMessage = "getItems by name method called for Item name: " + name;
+		log.info(logMessage);*/
 		List<Item> items = itemRepository.findByName(name);
 		return items == null || items.isEmpty() ? ResponseEntity.notFound().build()
 				: ResponseEntity.ok(items);

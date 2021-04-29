@@ -1,6 +1,7 @@
 package com.example.demo;
 
 import com.splunk.*;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.domain.EntityScan;
@@ -21,7 +22,7 @@ public class SareetaApplication {
 		return new BCryptPasswordEncoder();
 	}
 
-	@Bean
+/*	@Bean
 	public TcpInput splunkService() throws IOException {
 		HttpService.setSslSecurityProtocol(SSLSecurityProtocol.TLSv1_2);
 		// Create a map of arguments and add login parameters that you get from splunk
@@ -52,7 +53,7 @@ public class SareetaApplication {
 		}
 		// Retrieve the input
 		return  (TcpInput)service.getInputs().get("3000");
-		}
+		}*/
 
 	public static void main(String[] args) {
 		SpringApplication.run(SareetaApplication.class, args);

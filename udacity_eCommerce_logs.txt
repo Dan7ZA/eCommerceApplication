@@ -1,0 +1,53 @@
+2021-04-29 13:46:47.161  INFO 33524 --- [main] com.example.demo.SareetaApplication      : Starting SareetaApplication using Java 1.8.0_282 on DESKTOP-04INR7J with PID 33524 (C:\Users\pitma\Programming\Udacity Java Web Developer\Section 4 - Security & DevOps\eCommerce Starter Code\starter_code\target\classes started by pitma in C:\Users\pitma\Programming\Udacity Java Web Developer\Section 4 - Security & DevOps\eCommerce Starter Code)
+2021-04-29 13:46:47.166 DEBUG 33524 --- [main] com.example.demo.SareetaApplication      : Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-04-29 13:46:47.167  INFO 33524 --- [main] com.example.demo.SareetaApplication      : No active profile set, falling back to default profiles: default
+2021-04-29 13:46:49.522  INFO 33524 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-29 13:46:49.523  INFO 33524 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-04-29 13:46:49.669  INFO 33524 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-29 13:46:49.978  INFO 33524 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-29 13:46:50.072  INFO 33524 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.27.Final
+2021-04-29 13:46:50.299  INFO 33524 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-29 13:46:50.437  INFO 33524 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-04-29 13:46:50.663  INFO 33524 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-04-29 13:46:50.682  INFO 33524 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-04-29 13:46:51.693  INFO 33524 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-29 13:46:52.336 DEBUG 33524 --- [main] e.d.s.JWTAuthenticationVerficationFilter : Filter 'JWTAuthenticationVerficationFilter' configured for use
+2021-04-29 13:46:53.339  INFO 33524 --- [main] com.example.demo.SareetaApplication      : Started SareetaApplication in 6.883 seconds (JVM running for 7.626)
+2021-04-29 13:46:58.796  INFO 33524 --- [http-nio-8080-exec-1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-29 13:46:59.070  INFO 33524 --- [http-nio-8080-exec-1] c.e.demo.controllers.UserController      : Username set with Dan1
+2021-04-29 13:53:43.080  INFO 33524 --- [http-nio-8080-exec-5] c.e.demo.controllers.UserController      : Username set with Dan
+2021-04-29 13:53:48.193  INFO 33524 --- [http-nio-8080-exec-6] c.e.demo.controllers.UserController      : Username set with Dan4
+2021-04-29 14:04:38.549  WARN 33524 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=1m17s463ms532µs801ns).
+2021-04-29 14:12:03.328  WARN 33524 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=7m29s729ms874µs400ns).
+
+2021-04-29 16:59:01.472  WARN 37616 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=25m34s124ms459µs400ns).
+2021-04-29 17:13:13.196  INFO 34072 --- [main] com.example.demo.SareetaApplication      : Starting SareetaApplication using Java 1.8.0_282 on DESKTOP-04INR7J with PID 34072 (C:\Users\pitma\Programming\Udacity Java Web Developer\Section 4 - Security & DevOps\eCommerce Starter Code\starter_code\target\classes started by pitma in C:\Users\pitma\Programming\Udacity Java Web Developer\Section 4 - Security & DevOps\eCommerce Starter Code)
+2021-04-29 17:13:13.202 DEBUG 34072 --- [main] com.example.demo.SareetaApplication      : Running with Spring Boot v2.4.2, Spring v5.3.3
+2021-04-29 17:13:13.203  INFO 34072 --- [main] com.example.demo.SareetaApplication      : No active profile set, falling back to default profiles: default
+2021-04-29 17:13:16.610  INFO 34072 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2021-04-29 17:13:16.611  INFO 34072 --- [main] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.41]
+2021-04-29 17:13:16.853  INFO 34072 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2021-04-29 17:13:17.311  INFO 34072 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2021-04-29 17:13:17.484  INFO 34072 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 5.4.27.Final
+2021-04-29 17:13:17.958  INFO 34072 --- [main] o.hibernate.annotations.common.Version   : HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2021-04-29 17:13:18.236  INFO 34072 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2021-04-29 17:13:18.666  INFO 34072 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2021-04-29 17:13:18.712  INFO 34072 --- [main] org.hibernate.dialect.Dialect            : HHH000400: Using dialect: org.hibernate.dialect.H2Dialect
+2021-04-29 17:13:20.474  INFO 34072 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2021-04-29 17:13:21.476 DEBUG 34072 --- [main] e.d.s.JWTAuthenticationVerficationFilter : Filter 'JWTAuthenticationVerficationFilter' configured for use
+2021-04-29 17:13:22.974  INFO 34072 --- [main] com.example.demo.SareetaApplication      : Started SareetaApplication in 10.84 seconds (JVM running for 12.016)
+2021-04-29 17:15:25.867  INFO 34072 --- [http-nio-8080-exec-2] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-04-29 17:15:25.979  INFO 34072 --- [http-nio-8080-exec-2] c.e.demo.controllers.UserController      : User: New User Created: User1
+2021-04-29 17:16:41.069  INFO 34072 --- [http-nio-8080-exec-5] c.e.demo.controllers.CartController      : Cart: item added to cart: 1 User: Username: User1
+2021-04-29 17:17:08.772  INFO 34072 --- [http-nio-8080-exec-6] c.e.demo.controllers.CartController      : Cart: item added to cart: 2 User: Username: User1
+2021-04-29 17:17:29.344  INFO 34072 --- [http-nio-8080-exec-7] c.e.demo.controllers.OrderController     : Order: order submitted: User: username: User1
+2021-04-29 17:17:41.658  INFO 34072 --- [http-nio-8080-exec-8] c.e.demo.controllers.UserController      : User: New User Created: User2
+2021-04-29 17:18:23.142  INFO 34072 --- [http-nio-8080-exec-10] c.e.demo.controllers.CartController      : Cart: item added to cart: 1 User: Username: User2
+2021-04-29 17:18:33.591  INFO 34072 --- [http-nio-8080-exec-1] c.e.demo.controllers.CartController      : Cart: item added to cart: 2 User: Username: User2
+2021-04-29 17:18:49.390  INFO 34072 --- [http-nio-8080-exec-2] c.e.demo.controllers.OrderController     : Order: order submitted: User: username: User2
+2021-04-29 17:19:14.986  INFO 34072 --- [http-nio-8080-exec-3] c.e.demo.controllers.UserController      : User: New User Created: User3
+2021-04-29 17:20:32.638  INFO 34072 --- [http-nio-8080-exec-7] c.e.demo.controllers.CartController      : Cart: item added to cart: 1 User: Username: User3
+2021-04-29 17:20:44.947  INFO 34072 --- [http-nio-8080-exec-8] c.e.demo.controllers.CartController      : Cart: item added to cart: 2 User: Username: User3
+2021-04-29 17:21:01.937  INFO 34072 --- [http-nio-8080-exec-9] c.e.demo.controllers.OrderController     : Order: order submitted: User: username: User3
+2021-04-29 17:21:40.149  INFO 34072 --- [http-nio-8080-exec-10] c.e.demo.controllers.CartController      : Cart: item added to cart: 2 User: Username: User1
+2021-04-29 17:22:34.975  INFO 34072 --- [http-nio-8080-exec-1] c.e.demo.controllers.CartController      : Cart: item removed from cart: 2 User: Username: User1

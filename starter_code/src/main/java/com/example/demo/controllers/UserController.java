@@ -6,7 +6,7 @@ import java.util.Base64;
 import java.util.Optional;
 
 
-import com.splunk.TcpInput;
+import com.splunk.*;
 import org.apache.logging.log4j.LogManager;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -34,8 +34,8 @@ public class UserController {
 
 	private static final Logger log = LoggerFactory.getLogger(UserController.class);
 
-	@Autowired
-	private TcpInput tcpInput;
+/*	@Autowired
+	private TcpInput tcpInput;*/
 
 	@Autowired
 	private UserRepository userRepository;
@@ -61,12 +61,8 @@ public class UserController {
 	public ResponseEntity<User> createUser(@RequestBody CreateUserRequest createUserRequest) {
 		User user = new User();
 		user.setUsername(createUserRequest.getUsername());
-		String logMessage = "Username set with " + createUserRequest.getUsername();
-		try {
-			tcpInput.submit(logMessage);
-		} catch (IOException e) {
-			e.printStackTrace();
-		}
+		String logMessage = "User: New User Created: " + createUserRequest.getUsername();
+		log.info(logMessage);
 		Cart cart = new Cart();
 		cartRepository.save(cart);
 		user.setCart(cart);
